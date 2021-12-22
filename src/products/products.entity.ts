@@ -4,8 +4,8 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 export class Products {
     @PrimaryGeneratedColumn('uuid')
     product_uid: string
-    @Column()
+    @Column({ nullable: false })
     product_name: string
-    @Column()
+    @Column({ nullable: false })
     product_price: number
 }

@@ -4,10 +4,10 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 export class Users {
     @PrimaryGeneratedColumn('uuid')
     user_uid: string
-    @Column()
+    @Column({ nullable: false })
     user_email: string
-    @Column() 
+    @Column({ nullable: false }) 
     user_password: string
-    @Column({ default: false })
+    @Column({ default: false, nullable: false })
     is_admin: Boolean
 }
